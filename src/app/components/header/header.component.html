@@ -1,0 +1,21 @@
+<header class="divContainer header">
+    <div class="firstDiv"></div>
+    @if (!isMobile){
+        <nav>
+            <a routerLink="about">Nosotros</a>
+            <a routerLink="" ><img src='/assets/logo.svg' alt='Logo' /></a>
+            <a routerLink="catalog">Catálogo</a>        
+        </nav>
+    } @else {
+        <nav>
+            <p>MOBILE</p>
+        </nav>
+    }
+    <div class='lastDiv cartIcon'>
+        <img src='/assets/cart.svg' alt='cart icon' (click)='handleCart()'/>
+    </div>
+</header>
+
+@if (cartOpen) {
+    <app-cart (closeCartEvent)='handleCart()'></app-cart> <!-- escucha el evento del hijo y ejecuta el metodo -->
+}

@@ -1,0 +1,9 @@
+<div class='cartProductContainer'>
+    <img src='/assets{{product.image}}' class="cartProductImage" alt={{product.name}} />
+    <div>
+      <h4>{{product.name}}</h4>
+      <p>${{product.price}}</p>        
+      <p>Cantidad: {{product.quantity}}</p>
+      <p class='productDltBtn' id={{product._id}} (click)='removeFromCart(product._id)'>Borrar</p>
+    </div>
+</div>

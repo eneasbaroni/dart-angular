@@ -1,0 +1,12 @@
+<section class='sectionContainer divContainer failure'>
+    <div class='firstDiv'></div>
+    <div class='notificationContainer'>
+        <div class='notificationDate'>
+            @if (notificationPath === 'success') {<h1>Tu pago fue <span>aprobado</span> con exito. Pronto nos podremos en contacto vía mal para informate sobre <span>la entrega de los productos</span></h1>}
+            @if (notificationPath === 'pending') { <h1>Tu pago se encuentra <span>pendiente</span>. Apenas se concrete nos podremos en contacto vía mal para informate sobre <span>la entrega de los productos</span></h1>}
+            @if (notificationPath === 'failure') {<h1>Tu pago fue <span>rechazado</span>. Por favor intentalo de nuevo</h1>}
+        </div> 
+        <a routerLink="">Volver a Inicio →</a>       
+    </div>
+    <div class='lastDiv'></div>      
+</section>

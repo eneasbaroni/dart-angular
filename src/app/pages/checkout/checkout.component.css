@@ -1,0 +1,112 @@
+.checkout {  
+    font-family: 'Darker Grotesque', sans-serif;  
+
+    .checkoutContainer { 
+        grid-column: 2 / span 10; 
+        width: 800px;  
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2rem 0;
+
+        h2, input, label {
+            font-family: 'Darker Grotesque', sans-serif; 
+        }
+
+        form {
+            width: 100%;
+            
+            .form-group {
+                width: 100%;   
+                display: flex;
+                border-bottom: 1px solid var(--main-border);
+                padding-bottom: 0.5rem;
+                margin-bottom: 1rem;
+
+                label {
+                    width: 30%;  
+                }
+
+                input {
+                    width: 70%;
+                    background-color: transparent;  
+                    border: none;
+
+                    &:focus {
+                        width: 70%;
+                        background-color: transparent; 
+                        outline: none;  
+                    }
+                }
+            }
+
+            button {
+                font-family: 'Darker Grotesque', sans-serif;
+                display: block;
+                width: 30%;  
+                margin: 0 auto; 
+            }
+        }
+    }
+}
+
+.mercadoPagoContainer {
+    width: 100vw;
+    height: 100vh;  
+    position: fixed;
+    top: 0;
+    left: 0;      
+    background-color: rgba(168, 168, 168, 0.6);
+    /* filter bklur */
+    backdrop-filter: blur(2px);
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 15vh;
+     
+    h2 {
+        color: white;
+        font-weight: 400;
+    }
+
+    .closeBtn {
+        width: 5rem;
+        cursor: pointer;
+        margin-top: 1.5rem;
+    }
+}
+
+#mercadopago {
+    font-family: 'Darker Grotesque', sans-serif;
+    display: block;     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+/* Mercado Pago Btn */
+.mercadopago-button {
+    border: 1px solid var(--main-border) !important;
+    border: transparent !important;
+    border-radius: 0 !important;
+    background-color: var(--second-color) !important;
+    color: var(--main-bg) !important;  
+    font-family: 'Darker Grotesque', sans-serif !important;
+    font-weight: 800 !important;;  
+    padding: 0.5rem 1rem !important;
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 1rem !important;
+}
+
+.loader {
+    position: fixed;
+    z-index: 70;
+}

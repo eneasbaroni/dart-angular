@@ -1,0 +1,47 @@
+<main class='sectionContainer checkout divContainer'>
+    <div class='firstDiv'></div>
+
+    @if (loading) { <app-loader class="loader"/>}
+
+
+    <div class='checkoutContainer'>
+        @if (cart$().length === 0) {
+            <h2 class='checkoutTitle'>No hay productos en el carrito</h2> 
+        } @else {
+            <h2 class='checkoutTitle'>Datos de Contacto</h2>        
+            <form class="form" [formGroup]="checkoutForm" (ngSubmit)='handleSubmit()'>
+                <div class="form-group">
+                    <label htmlFor="name">NOMBE</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" formControlName="name" required/>
+                </div>
+                <div class="form-group">
+                    <label htmlFor="name">NUMERO DE TELEFONO</label>
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Numero de Teléfono" formControlName="phone" required/>
+                </div>
+                <div class="form-group">
+                    <label htmlFor="name">EMAIL</label>
+                    <input type="text" class="form-control" name="identification" id="identification" placeholder="Email" formControlName="identification" required/>
+                </div>
+                <div class="form-group">
+                    <label htmlFor="name">DIRECCION</label>
+                    <input type="text" class="form-control" name="address" id="address" placeholder="Dirección" formControlName="address" required/>
+                </div>
+                <div class="form-button">                   
+                    <button type="submit" class="addBtn" [disabled]="checkoutForm.invalid">CHECKOUT</button>                     
+                    <!-- <button type="submit" class="addBtnDsbl" disabled>CHECKOUT</button> -->          
+                </div>
+            </form>
+        }  
+        
+        
+        @if(mercadoPagoOpen) {
+            <div class="mercadoPagoContainer">
+                <h2>Pagar mediante Mercado Pago</h2>
+                <div id='mercadopago'> </div>
+                <button class='closeBtn' (click)='closeMercadoPago()'>X</button>
+            </div>
+        }
+    </div>  
+
+    <div class='lastDiv'></div>    
+</main>

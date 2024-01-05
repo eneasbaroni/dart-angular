@@ -1,0 +1,21 @@
+<section class='sectionContainer product divContainer'>
+    <div class='firstDiv'></div>
+        @if (product$ | async; as product) {
+        <div class='productDetailContainer'>
+                <div class='productDetailImg'>
+                    <img src='/assets{{product.image}}' alt={{product.name}} class='productDetailImage' />
+                </div>
+                <div class='productInfo'>
+                    <h3>{{product.name}}</h3>
+                    <p>{{product.description}}</p>
+                    <p class='productPrice'>${{product.price}}</p>
+                    <app-counter class="counter" [product]="product"/>
+                    <!-- <Counter addProduct={{addProduct}}/> -->
+                    <a routerLink="/catalog">Volver a Catalogo</a> 
+                </div>               
+            </div>
+        } @else {
+            <app-loader/>
+        }      
+    <div class='lastDiv'></div> 
+</section>

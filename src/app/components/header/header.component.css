@@ -1,0 +1,48 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;  
+    background-color: var(--main-bg);
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);  
+    z-index: 60;
+
+    img {
+        height: 2.5rem;  
+        filter: var(--main-filter)
+    }
+
+    nav {
+        grid-column: 2 / span 10;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;  
+        padding: 1rem;
+
+        a {
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: var(--second-color);
+            }
+        }
+    }
+
+    .cartIcon {  
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        cursor: pointer;
+        
+        img {
+            height: 1.2rem;
+            filter: var(--main-filter)   
+        }
+    }
+
+}

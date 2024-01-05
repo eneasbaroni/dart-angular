@@ -1,0 +1,39 @@
+.counter {
+    width: 100%;
+}
+
+.counterContainer {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0 0;
+
+    button, p {
+        width: calc(100% / 3);
+        height: 3rem;
+        border: 1px solid var(--main-border);
+        background-color: var(--main-bg);
+        color: var(--main-color);
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: 'Baskervville', serif;
+        cursor: pointer;
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+    }  
+
+    p {
+        padding: 0.5rem 0;  
+    }
+}
+
+.addToCartBtn {
+    width: 100%;
+    border: 1px solid var(--main-border);
+    background-color: var(--main-bg);
+    color: rgb(231, 48, 78);
+    cursor: pointer;
+}

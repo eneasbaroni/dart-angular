@@ -1,0 +1,23 @@
+<section class='sectionContainer cart'>
+    <!-- <div class='cartContainer' style={{right: rightPosition}}> -->
+    <!-- <div class='cartContainer'> -->
+    <div [ngClass]="hidden === true ? 'cartContainer cartContainerHidden' : 'cartContainer'">
+        <div class='cartHeader'>
+            <h2 class='cartTitle'>Your cart</h2> 
+            <button class='closeCart' (click)="closeCart()">X</button>
+        </div>
+        <div class='cartItemsContainer'>
+            @if (cart$().length === 0) {
+                <h2 class='emptyCart'>Your cart is empty</h2> 
+            } @else {
+                @for (product of cart$(); track product._id) {
+                    <app-cart-product [product]="product"/>
+                }
+            }            
+        </div> 
+        @if (cart$().length > 0) {
+            <h2 class='cartTotal'>Total ${{totalPrice$()}}</h2> 
+            <a routerLink="checkout" class='checkoutBtn' (click)="closeCart()">CHECKOUT</a>           
+        }        
+    </div>     
+</section>

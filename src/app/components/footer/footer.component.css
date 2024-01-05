@@ -1,0 +1,32 @@
+.footer {   
+    border-top: 1px solid var(--main-border); 
+}
+
+.footerContainer {
+    grid-column: 2 / span 10;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);    
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+
+    h3 {
+        font-family: 'Baskervville', serif;  
+        grid-column: 1 / span 5;  
+        font-size: 1rem;  
+        width: 100%;
+        text-align: left ;  
+        margin: 1rem auto;  
+        padding: 0 1rem;
+    }
+
+    a {
+        font-family: 'Baskervville', serif;  
+        grid-column: auto / span 5;  
+        font-size: 1rem;  
+        width: 100%;
+        text-align: right;
+        margin: 1rem auto;
+        padding: 0 1rem;
+        text-decoration: none;
+    }
+}

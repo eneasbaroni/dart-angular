@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+:root {  
+    --main-color: #f2eadf;
+    --main-color: #111111 ;
+    --second-color: rgb(231, 48, 78);
+    --third-color: #7928ca;
+    --fourth-color: #e94f2d;   
+    --main-bg: #111111;  
+    --main-bg: #f2eadf;  
+    --second-bg: #a3a3a3;  
+    --main-border: rgba(0, 0, 0, 0.2);
+    --main-filter: invert(0%) sepia(6%) saturate(9%) hue-rotate(343deg) brightness(100%) contrast(87%);
+  }
+  
+  * {  
+    font-family: 'Baskervville', serif;
+    font-family: 'Italiana', serif;
+    font-size: 16px; 
+    font-weight: 400;   
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box;
+    color: var(--main-color);
+  }
+  
+  html {
+    font-family: 'Italiana', serif;
+    font-size: 16px;   
+    background: var(--main-bg);
+    min-height: 100vh;
+  }
+  
+  .v {
+    border: 1px solid var(--main-color);
+  }
+  
+  .sectionContainer {  
+    margin-inline: auto;  
+    min-height: calc(100vh - 78px - 54px);  
+  }
+  
+  .divContainer {  
+    margin-inline: auto;  
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr); 
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 1rem auto;
+    text-align: center;
+  }
+  
+  /* GRID */
+  .firstDiv {
+    grid-column: 1 / span 1;  
+    width: 100%;  
+    border-right: 1px solid var(--main-border)
+  }
+  
+  .lastDiv {
+    grid-column: 12 / span 1;
+    width: 100%;  
+    border-left: 1px solid var(--main-border)
+  }

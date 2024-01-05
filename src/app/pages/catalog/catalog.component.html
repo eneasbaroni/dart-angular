@@ -1,0 +1,24 @@
+<section class='catalog divContainer sectionContainer'>
+    <div class='firstDiv'></div>
+    <div class="catalogSection"> 
+        <h1>CATALOGO</h1>
+            <div class='catalogContainer'>
+                @if (products$ | async; as products) {
+                    @for (product of products; track product._id) {
+                        <div class='productContainer'>
+                            <img src="/assets{{product.image}}" alt="{{product.name}}">
+                            <div className='productTitles'>
+                                <h3>{{product.name}}</h3> 
+                                <a routerLink="/catalog/{{product._id}}">View Detail →</a>                                
+                            </div>                            
+                        </div>
+                    }
+                    
+                } @else {
+                    <app-loader/>
+                }                  
+        </div>
+    </div>
+    <div class='lastDiv'></div>
+
+</section>

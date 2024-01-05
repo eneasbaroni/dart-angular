@@ -1,0 +1,67 @@
+.homeContainer {
+    grid-column: 2 / span 10;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);    
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+    position: relative;
+
+    h1 {
+        font-family: 'Baskervville', serif;    
+        position: absolute;
+        width: 90vw;
+        top: 2rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;  
+        font-size: max(3.5vw, 2rem); 
+        text-align: center;
+        margin-top: 5rem;
+        z-index: 1;
+
+        span{
+            font-family: 'Baskervville', serif;
+            font-style: italic ; 
+            font-size: 2rem;  
+            font-size: max(4vw, 2rem);
+            text-align: center; 
+        }
+    }
+
+    a {
+        margin-top: 6rem;
+        height: auto;  
+        grid-column: 4 / span 4;
+        display: flex;      
+    }
+
+    img {   
+        width: 100%;  
+        aspect-ratio: 4/5; 
+        border-radius: 50vw 50vw 0 0;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center;
+        padding-bottom: 2rem;
+    }
+
+    .homeFirstP {
+        grid-column: 1 / span 3;
+        padding: 2vw;
+        font-family: 'Baskervville', serif;  
+        font-size: 1rem;  
+        text-align: center !important;  
+        z-index: 1;
+    }
+      
+    .homeSecondP {
+        grid-column: auto / span 3;
+        padding: 2vw;
+        font-family: 'Baskervville', serif;  
+        font-size: 1rem;  
+        text-align: center !important;  
+        z-index: 1;
+    }
+}
