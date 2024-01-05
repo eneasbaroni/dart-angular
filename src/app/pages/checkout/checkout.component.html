@@ -13,18 +13,34 @@
                 <div class="form-group">
                     <label htmlFor="name">NOMBE</label>
                     <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" formControlName="name" required/>
+                    @if (checkoutForm.get('name')?.invalid && checkoutForm.get('name')?.touched) {
+                        <small>El nombre es obligatorio</small>
+                    }
                 </div>
                 <div class="form-group">
                     <label htmlFor="name">NUMERO DE TELEFONO</label>
                     <input type="text" class="form-control" name="phone" id="phone" placeholder="Numero de Teléfono" formControlName="phone" required/>
+                    @if (checkoutForm.get('phone')?.invalid && checkoutForm.get('phone')?.touched) {
+                        <small >El numero de telefono es obligatorio</small>
+                    }
                 </div>
                 <div class="form-group">
                     <label htmlFor="name">EMAIL</label>
                     <input type="text" class="form-control" name="identification" id="identification" placeholder="Email" formControlName="identification" required/>
+                    @if (checkoutForm.get('identification')?.hasError('required') && checkoutForm.get('identification')?.touched) {
+                        <small >El email es obligatorio</small>
+                    }
+                    <!-- verficar formato email -->
+                    @if (checkoutForm.get('identification')?.hasError('email') && checkoutForm.get('identification')?.touched) {
+                        <small> El formato del email es incorrecto</small>
+                    }
                 </div>
                 <div class="form-group">
                     <label htmlFor="name">DIRECCION</label>
                     <input type="text" class="form-control" name="address" id="address" placeholder="Dirección" formControlName="address" required/>
+                    @if (checkoutForm.get('address')?.invalid && checkoutForm.get('address')?.touched) {
+                        <small >La direccion es obligatoria</small>
+                    }
                 </div>
                 <div class="form-button">                   
                     <button type="submit" class="addBtn" [disabled]="checkoutForm.invalid">CHECKOUT</button>                     
