@@ -1,0 +1,6 @@
+<div [ngClass]="hidden === true ? 'mobileMenu mobileMenuHidden' : 'mobileMenu'">
+    <h3 (click)="setCloseMobileMenu()">X</h3>
+    <div><a routerLink="about" (click)="setCloseMobileMenu()">Nosotros</a></div>
+    <div><a routerLink="" (click)="setCloseMobileMenu()">Home</a></div>
+    <div><a routerLink="catalog" (click)="setCloseMobileMenu()">Catálogo</a></div>
+</div>
