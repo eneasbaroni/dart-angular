@@ -9,6 +9,10 @@
         grid-column: 1 / span 10;
         width: 70%;
         margin: 0 auto;
+
+        @media screen and (max-width: 991px) {
+            width: 90%;  
+        }
     }
 
     h1 {  
@@ -19,7 +23,11 @@
         margin-top: 5rem; 
         padding: 2rem 0;
         border-top: 1px solid var(--main-color);
-        border-bottom: 1px solid var(--main-color);   
+        border-bottom: 1px solid var(--main-color);  
+        
+        @media screen and (max-width: 767px) {
+            font-size: clamp(1.5rem, 2vw, 2rem);  
+        }
         
         span {  
             font-family: 'Baskervville', serif;
@@ -27,7 +35,11 @@
             /* text-decoration: underline; */
             border-bottom: 2px solid var(--main-border);  
             font-size: clamp(2rem, 4vw, 4rem);
-            text-align: center
+            text-align: center;
+
+            @media screen and (max-width: 767px) {
+                font-size: clamp(1.5rem, 2vw, 2rem);  
+            }
         }
     } 
     
@@ -37,5 +49,9 @@
         font-size: 1.1rem;
         font-family: 'Baskervville', serif;
         margin: 1rem auto;
+
+        @media screen and (max-width: 575px) {    
+            font-size: 1rem; 
+        }
     }
 }

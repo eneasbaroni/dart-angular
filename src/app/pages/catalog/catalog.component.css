@@ -11,10 +11,31 @@
         text-align: center;
     }
 
+    @media screen and (max-width: 991px) {                 
+        .catalogContainer > *:nth-child(1), .catalogContainer > *:nth-child(4) {
+            border-right: none;  
+        }
+    
+        .catalogContainer > *:nth-child(3), .catalogContainer > *:nth-child(6) {
+            border-left: none;  
+        }
+    
+        .catalogContainer > *:nth-child(even) {
+            border-left: 1px solid var(--main-border) !important;  
+        }  
+    }
+
+    @media screen and (max-width: 766px) {  
+        .catalogContainer > *:nth-child(even) {
+            border-left: none;  
+        }
+    }
+
     .catalogContainer {
         grid-column: 1 / span 10;
         display: grid;
         grid-template-columns: repeat(12, 1fr);  
+
 
         .productContainer {
             grid-column: auto / span 4; 
@@ -25,6 +46,15 @@
             padding-bottom: 1rem;  
             margin: 2rem auto; 
             padding: 0 4rem; 
+
+            @media screen and (max-width: 991px) {                 
+                grid-column: auto / span 6; 
+                padding: 0 2rem;
+            }
+
+            @media screen and (max-width: 766px) {  
+                grid-column: auto / span 12; 
+            }
 
             img {
                 width: 100%;
@@ -43,11 +73,25 @@
                 justify-content:space-between;
                 align-items: center;
 
+                @media screen and (max-width: 1500px) {                        
+                    flex-direction: column;   
+                    text-align: left; 
+                }
+
                 h3 {
                     font-size: 1.5rem;
                     font-weight: 400;
                     font-family: 'Baskervville', serif;
                     margin: 0;
+
+                    @media screen and (max-width: 1500px) {                        
+                        width: 100%;   
+                        text-align: left;  
+                    }
+
+                    @media screen and (max-width: 1200px) {  
+                        font-size: 1.2rem;    
+                    }
                 }
 
                 a {
@@ -56,13 +100,18 @@
                     background-color: var(--main-bg);
                     text-decoration: none;
                     text-align: right;
+
+                    @media screen and (max-width: 1500px) {                        
+                        width: 100%;   
+                        text-align: left;  
+                    }
+
+                    @media screen and (max-width: 1200px) {  
+                        font-size: 1.2rem;    
+                    }
                 }
             }
         }
     }
-
-
-
-
 
 }

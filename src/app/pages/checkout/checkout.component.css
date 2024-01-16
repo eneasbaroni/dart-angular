@@ -11,6 +11,24 @@
         align-items: center;
         padding: 2rem 0;
 
+        @media screen and (max-width: 991px) {            
+            width: 80%;                  
+        }
+
+        @media screen and (max-width: 575px) {
+            label {
+              display: none;  
+            }
+          
+            input {
+              width: 100%;    
+            }
+          
+            button {    
+              width: 6rem;       
+            }
+        }
+
         h2, input, label {
             font-family: 'Darker Grotesque', sans-serif; 
         }
@@ -119,3 +137,4 @@
     position: fixed;
     z-index: 70;
 }
+

@@ -9,6 +9,10 @@
     gap: 0.5rem;
     padding: 0 0.5rem;
 
+    @media screen and (max-width: 767px) {          
+        margin: 1rem auto;
+    }
+
     h3 {
         font-family: 'Baskervville', serif;  
         grid-column: 1 / span 5;  
@@ -17,6 +21,12 @@
         text-align: left ;  
         margin: 1rem auto;  
         padding: 0 1rem;
+
+        @media screen and (max-width: 767px) {          
+            grid-column: auto / span 10; 
+            text-align: center;
+            margin: 0 auto;
+        }
     }
 
     a {
@@ -28,5 +38,12 @@
         margin: 1rem auto;
         padding: 0 1rem;
         text-decoration: none;
+
+        @media screen and (max-width: 767px) {          
+            grid-column: auto / span 10; 
+            text-align: center;
+            margin: 0 auto;
+        }
     }
 }
+

@@ -15,12 +15,30 @@
         margin: 5rem 0;
         border-right: 1px solid var(--main-border);
 
+        @media screen and (max-width: 767px) {        
+            grid-column: 1 / span 10; 
+            height: auto;   
+            padding-bottom: 1rem;
+            /* height: 70vh; */ 
+            margin: 1rem 0;
+            border-right: none;
+            border-bottom: 1px solid var(--main-border);
+        }
+
         img {
             width: 60%;
             aspect-ratio: 2/3;
             border-radius: 50vw 50vw 0 0;
             object-fit: cover;
             object-position: center;
+
+            @media screen and (max-width: 767px) {        
+                width: 60%;
+            }
+
+            @media screen and (max-width: 575px) {            
+                width: 80%;
+            }
         }
     }
 
@@ -32,7 +50,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 6vw;        
+        padding: 0 6vw;   
+        
+        @media screen and (max-width: 767px) {        
+            grid-column: auto / span 10;
+            padding: 4rem;    
+            padding: 0 6vw;
+        }
 
         h3 {  
             font-size: calc(3rem + 1.5vw);
@@ -40,11 +64,23 @@
             width: 100%;
             text-align: left;
             margin: 0; 
+
+            @media screen and (max-width: 767px) {        
+                font-size: calc(2rem + 1.5vw);
+                font-weight: 400;
+                width: 100%;
+                text-align: center;
+                margin: 0; 
+            }
         }
 
         p {
             font-size: 1.2rem;    
             font-family: 'Baskervville', serif;
+
+            @media screen and (max-width: 767px) {        
+                font-size: 1rem;
+            }
         }
 
         .productPrice {
@@ -53,6 +89,12 @@
             width: 100%;
             text-align: left; 
             font-family: 'Italiana', serif;   
+
+            @media screen and (max-width: 767px) {        
+                margin-top: 1rem;
+                font-size: calc(1.5rem + 1.5vw);     
+                text-align: center
+            }
         }
     }
 
