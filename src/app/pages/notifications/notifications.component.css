@@ -10,6 +10,10 @@
         width: 70%;
         margin: 0 auto;
 
+        @media screen and (max-width: 991px) {   
+            width: 90%;
+        }
+
         h1 {  
             font-family: 'Baskervville', serif;  
             grid-column: 1 / span 10;  
@@ -20,13 +24,21 @@
             border-top: 1px solid var(--main-color);
             border-bottom: 1px solid var(--main-color);
 
+            @media screen and (max-width: 767px) {  
+                  font-size: 2rem;    
+            }
+
             span {  
                 font-family: 'Baskervville', serif;
                 font-style: italic ;
                 /* text-decoration: underline; */
                 border-bottom: 2px solid var(--main-border);  
                 font-size: 4rem;  
-                text-align: center
+                text-align: center;
+
+                @media screen and (max-width: 767px) {  
+                    font-size: 2rem;    
+                }
             }
         }
     }
@@ -45,5 +57,3 @@
         }
     }
 }
-
-
