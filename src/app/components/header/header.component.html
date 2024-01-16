@@ -7,13 +7,24 @@
             <a routerLink="catalog">Catálogo</a>        
         </nav>
     } @else {
-        <nav>
-            <p>MOBILE</p>
+        <nav>  
+            <a routerLink="" ><img src='/assets/logo.svg' alt='Logo' /></a>
+            <div class='burgerMenu' (click)='handleMenuMobile()'>
+              <div class='line1'></div>
+              <div class='line2'></div>
+            </div>
         </nav>
     }
+
+    @if (isMenuOpen) {
+        <app-mobile-menu (closeMenu)="handleMenuMobile()" class="menuMobile"/>
+    }
+
     <div class='lastDiv cartIcon'>
         <img src='/assets/cart.svg' alt='cart icon' (click)='handleCart()'/>
     </div>
+
+    
 </header>
 
 @if (cartOpen) {
