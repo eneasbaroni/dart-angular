@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, CurrencyPipe } from '@angular/common';
 import { ProductsService } from '../../services/products.service';
 import { Observable } from 'rxjs';
 import { Product } from '../../../interfaces/products';
@@ -10,7 +10,7 @@ import { CounterComponent } from '../../components/counter/counter.component';
 @Component({
   selector: 'app-product-detail',
   standalone: true,
-  imports: [AsyncPipe, RouterLink, CounterComponent, LoaderComponent],
+  imports: [AsyncPipe, CurrencyPipe, RouterLink, CounterComponent, LoaderComponent],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css'
 })

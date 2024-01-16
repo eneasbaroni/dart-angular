@@ -8,7 +8,7 @@
                 <div class='productInfo'>
                     <h3>{{product.name}}</h3>
                     <p>{{product.description}}</p>
-                    <p class='productPrice'>${{product.price}}</p>
+                    <p class='productPrice'>{{product.price | currency}}</p>
                     <app-counter class="counter" [product]="product"/>
                     <!-- <Counter addProduct={{addProduct}}/> -->
                     <a routerLink="/catalog">Volver a Catalogo</a> 
